@@ -85,7 +85,6 @@ public class Main extends Application {
 		} else if (e.getSource() == btClear) {
 			tfCabecera.clear();
 		} else if (e.getSource() == btIgual) {
-			conseguirNumero();
 			tfCabecera.setText(calculos());
 			simbolos.clear();
 			igualPulsado = true;
@@ -94,7 +93,7 @@ public class Main extends Application {
 		}
 	}
 
-	private void conseguirNumero() {
+	private void conseguirNumeros() {
 		
 		if (tfCabecera.getText().length() != 0) {
 			String[] listaNumeros = tfCabecera.getText().split(" [+-/X] ");
@@ -107,7 +106,7 @@ public class Main extends Application {
 	}
 
 	private String calculos() {
-		conseguirNumero();
+		conseguirNumeros();
 		numeros.clear();
 		return Integer.toString(total);
 	}
